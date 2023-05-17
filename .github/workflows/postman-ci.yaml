@@ -1,0 +1,27 @@
+name: Postman CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  postman:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Newman
+        run: npm install -g newman
+
+      - name: Run Postman Collection
+        run: newman run CURD.postman_collection.json --reporters cli,junit --reporter-junit-export report.xml
+
+      - name: Store Report Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-report
+          path: report.xml
+          retention-days: 30
