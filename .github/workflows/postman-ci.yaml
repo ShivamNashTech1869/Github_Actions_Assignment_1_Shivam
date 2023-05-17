@@ -20,8 +20,8 @@ jobs:
       - name: Run Postman Collection
         run: newman run CURD.postman_collection.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
 
-      - name: Verify Report File
-        run: ls report.html
+      - name: Display Directory Contents
+        run: ls
 
       - name: Store Report Artifact
         uses: actions/upload-artifact@v2
