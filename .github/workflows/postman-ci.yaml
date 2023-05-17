@@ -18,11 +18,10 @@ jobs:
         run: npm install -g newman
 
       - name: Run Postman Collection
-        run: newman run CURD.postman_collection.json --reporters cli,junit --reporter-junit-export report.xml
+        run: newman run path/to/your-collection.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
 
       - name: Store Report Artifact
         uses: actions/upload-artifact@v2
         with:
           name: test-report
-          path: report.xml
-          retention-days: 30
+          path: report.html
