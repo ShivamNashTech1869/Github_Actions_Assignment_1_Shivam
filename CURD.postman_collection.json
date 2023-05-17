@@ -253,7 +253,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "",
+			"value": "https://reqres.in/api/",
 			"type": "string"
 		}
 	]
