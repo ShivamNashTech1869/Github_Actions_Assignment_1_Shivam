@@ -18,7 +18,7 @@ jobs:
         run: npm install -g newman
 
       - name: Run Postman Collection
-        run: newman run path/to/your-collection.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
+        run: newman run CURD.postman_collection.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
 
       - name: Store Report Artifact
         uses: actions/upload-artifact@v2
