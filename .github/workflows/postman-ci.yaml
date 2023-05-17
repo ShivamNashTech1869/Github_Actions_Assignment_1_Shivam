@@ -15,7 +15,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install Newman
-        run: npm install -g newman
+        run: |
+           npm install -g newman newman-reporter-htmlextra
+        
 
       - name: Run Postman Collection
         run: newman run CURD.postman_collection.json --reporters cli,htmlextra --reporter-htmlextra-export report.html
