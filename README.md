@@ -18,7 +18,7 @@ To get started with the GitHub Actions Assignment, follow these steps:
 
 3. Customize the Postman collection (`CURD.postman_collection.json`) to suit your needs. Modify the API endpoints, request payloads, and test assertions according to your application requirements.
 
-4. Review and update the `.github/workflows/main.yml` file to configure the GitHub Actions pipeline. Ensure that the correct paths to the Postman collection file and Newman command are specified.
+4. Review and update the `.github/workflows/postman-ci.yaml` file to configure the GitHub Actions pipeline. Ensure that the correct paths to the Postman collection file and Newman command are specified.
 
 5. Open the project in your preferred code editor to make any necessary modifications.
 
