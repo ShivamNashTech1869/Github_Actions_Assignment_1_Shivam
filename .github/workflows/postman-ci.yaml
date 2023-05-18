@@ -3,7 +3,7 @@ name: Postman CI
 on:
   push:
     branches:
-      - main
+      - feature/gitHubActionsAssignmentTwo
   workflow_dispatch:
 
 jobs:
