@@ -6,6 +6,14 @@ This repository contains the code and configuration files for the GitHub Actions
 
 The GitHub Actions Assignment focuses on creating a CI/CD pipeline using GitHub Actions. The pipeline includes running a Postman collection, executing Selenium tests, and running a Scala code using SBT. The pipeline is designed to automate the testing and deployment process.
 
+### Highlighted Features:
+
+ **Postman Collection Execution:** Run your Postman collection and generate a detailed test report.
+ 
+ **Selenium Test Execution:** Execute Selenium tests and generate a detailed test report
+ 
+ **SBT Project Execution:** Build and run your Scala code using SBT, ensuring its correctness and performance.
+ 
 ## Getting Started
 
 To get started with the GitHub Actions Assignment, follow these steps:
