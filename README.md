@@ -1,6 +1,6 @@
 # GitHub Actions Assignment(1+2)
 
-This repository contains the code and configuration files for the GitHub Actions Assignment 1.
+This repository contains the code and configuration files for the GitHub Actions Assignment 1+2.
 
 ## Introduction
 
