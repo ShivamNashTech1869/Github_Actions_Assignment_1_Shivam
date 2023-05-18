@@ -3,11 +3,11 @@ name: Postman CI
 on:
   push:
     branches:
-      - feature/gitHubActionsAssignmentTwo
+      - feature/gitHubActionsAssignmentFour
   workflow_dispatch:
 
 jobs:
-  postman:
+  Postman:
     runs-on: ubuntu-latest
 
     steps:
@@ -57,4 +57,33 @@ jobs:
         with:
           name: selenium-report
           path: target/surefire-reports/emailable-report.html
-          retention-days: 30   
+          retention-days: 30
+  
+  Sbt:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
+      - name: Set up sbt
+        run: |
+          curl -sL "https://github.com/sbt/sbt/releases/download/v1.5.4/sbt-1.5.4.tgz" | tar zxvf - -C $HOME
+          echo "export PATH=\"$HOME/sbt/bin:$PATH\"" >> $HOME/.bashrc
+          source $HOME/.bashrc
+
+      - name: Build with sbt
+        run: |
+          cd SbtWithGithubAction
+          sbt clean compile
+
+      - name: Run Scala Code
+        run: |
+          cd SbtWithGithubAction
+          sbt "runMain DiamondPattern"
